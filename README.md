@@ -1,13 +1,26 @@
-bemp is a simple URL router proxy for [bem server](http://bem.info/tools/bem/commands/).
+bemp is a simple URL router proxy for [bem server](http://bem.info/tools/bem/commands/) built on top of [COA](https://github.com/veged/coa) and [node-http-proxy](https://github.com/nodejitsu/node-http-proxy).
 
-# Installation
+### Features:
+
+* Use manually started bem server with params ``--bemhost`` (default is localhost) and ``--bemport`` (default is 8080).
+* Use local project's bem server (e.g. ``-r cwd``).
+* Use bem server from its own dependancies (flag ``--internal``).
+* Use globally install bem server (flag ``--global``).
+* Some very basic [default routes table](#basic-default-routes) built-in.
+
+
+## Installation
 
 ``sudo npm install -g bemp``
 
-# Usage
+## Usage
 ``sudo bemp --root ~/Sites/bem-www/ -c sample-routes.json``
+sudo is required to launch server on 80 port
 
-# Basic default routes
+You can specify host, port and project root. All the params are optional.
+See ``bemp --help`` for details.
+
+## Basic default routes
 
 ````javascript
 {
@@ -18,3 +31,5 @@ bemp is a simple URL router proxy for [bem server](http://bem.info/tools/bem/com
     "/": "/desktop.bundles/index/"
 }
 ````
+
+Take a look at [sample-routes.json](https://github.com/tadatuta/bemp/blob/master/sample-routes.json) for more examples (it's a route table for [bem.info](http://bem.info/) actually).
