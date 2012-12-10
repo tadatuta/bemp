@@ -1,13 +1,15 @@
 {
   "name": "bemp",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "http://github.com/tadatuta/bemp",
   "author": "Vladimir Grinenko <i@tadatuta.com> (http://github.com/tadatuta)",
   "bugs": {
-    "url": "http://github.com/tadatuta/bemp/issues"
+    "url": "https://github.com/tadatuta/bemp/issues"
   },
   "description": "URL rewrite proxy for bem server",
-  "main": "index.js",
+  "bin": {
+    "bemp": "./bin/bemp"
+  },
   "scripts": {
     "test": "make test",
     "coverage": "make coverage"
