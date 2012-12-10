@@ -15,9 +15,11 @@ bemp is a simple URL router proxy for [bem server](http://bem.info/tools/bem/com
 
 ## Usage
 ``sudo bemp --root ~/Sites/bem-www/ -c sample-routes.json``
-sudo is required to launch server on 80 port
+
+sudo is required to launch server on 80 port.
 
 You can specify host, port and project root. All the params are optional.
+
 See ``bemp --help`` for details.
 
 ## Basic default routes
